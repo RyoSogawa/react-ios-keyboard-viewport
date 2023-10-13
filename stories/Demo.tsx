@@ -1,12 +1,12 @@
 import React from 'react';
 
 const Demo: React.FC = () => (
-  <main>
-    <header>Header</header>
+  <main className="wrapper">
+    <header className="header">Header</header>
     <div>
-      <textarea placeholder="focus here" />
+      <textarea className="textarea" placeholder="focus here" />
     </div>
-    <footer>Footer</footer>
+    <footer className="footer">Footer</footer>
   </main>
 );
 

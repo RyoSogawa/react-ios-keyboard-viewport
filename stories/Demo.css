@@ -1,0 +1,31 @@
+.wrapper {
+  padding: 48px 12px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+}
+
+.textarea {
+  height: 200vh;
+  width: 100%;
+  font-size: 16px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
