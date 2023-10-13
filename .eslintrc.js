@@ -7,6 +7,7 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:storybook/recommended',
     'prettier',
+    'plugin:storybook/recommended'
   ],
   plugins: ['@typescript-eslint', 'jsx-a11y', 'react', 'react-hooks'],
   parser: '@typescript-eslint/parser',
