@@ -1,0 +1,14 @@
+node_modules
+dist
+lib
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+.log*
+
+#ide
+.idea
+.vscode
