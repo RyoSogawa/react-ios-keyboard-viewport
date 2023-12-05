@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import { useIsIos } from './utils';
+
 export type Distance = {
   forTop: number;
   forBottom: number;
@@ -10,8 +12,11 @@ export const useVisualViewportDistance = () => {
     forTop: 0,
     forBottom: 0,
   });
+  const isIOs = useIsIos();
 
   useEffect(() => {
+    if (!isIOs) return;
+
     const calcHeight: EventListener = () => {
       setDistance({
         forTop: window.scrollY,
