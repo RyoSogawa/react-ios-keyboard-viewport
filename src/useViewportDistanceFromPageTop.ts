@@ -3,14 +3,14 @@ import { useEffect, useState } from 'react';
 import { useIsIOs } from './utils';
 
 export type Distance = {
-  forTop: number;
-  forBottom: number;
+  toTop: number;
+  toBottom: number;
 };
 
-export const useVisualViewportDistance = () => {
+export const useViewportDistanceFromPageTop = () => {
   const [distance, setDistance] = useState<Distance>({
-    forTop: 0,
-    forBottom: 0,
+    toTop: 0,
+    toBottom: 0,
   });
   const isIOs = useIsIOs();
 
@@ -19,8 +19,8 @@ export const useVisualViewportDistance = () => {
 
     const calcHeight: EventListener = () => {
       setDistance({
-        forTop: window.scrollY,
-        forBottom: window.scrollY + (visualViewport?.height || 0),
+        toTop: window.scrollY,
+        toBottom: window.scrollY + (visualViewport?.height || 0),
       });
     };
 
@@ -35,7 +35,7 @@ export const useVisualViewportDistance = () => {
       }
       window.removeEventListener('scroll', calcHeight);
     };
-  }, []);
+  }, [isIOs]);
 
   return {
     distance,

@@ -1,7 +1,7 @@
 import type React from 'react';
 
 import useKeyboardHeight from './useKeyboardHeight';
-import { useVisualViewportDistance } from './useVisualViewportDistance';
+import { useViewportDistanceFromPageTop } from './useViewportDistanceFromPageTop';
 import { useIsIOs } from './utils';
 
 export type FixedStyle = {
@@ -10,7 +10,7 @@ export type FixedStyle = {
 };
 
 const useFixedStyleWithIosKeyboard = (): FixedStyle => {
-  const { distance } = useVisualViewportDistance();
+  const { distance } = useViewportDistanceFromPageTop();
   const isIOs = useIsIOs();
   const keyboardHeight = useKeyboardHeight();
   const isKeyboardVisible = keyboardHeight > 0;
@@ -27,13 +27,13 @@ const useFixedStyleWithIosKeyboard = (): FixedStyle => {
     forTop: {
       position: 'absolute',
       top: 0,
-      transform: `translateY(${distance.forTop}px)`,
+      transform: `translateY(${distance.toTop}px)`,
     },
     forBottom: {
       position: 'absolute',
       top: 0,
       bottom: 'auto',
-      transform: `translateY(calc(-100% + ${distance.forBottom}px))`,
+      transform: `translateY(calc(-100% + ${distance.toBottom}px))`,
     },
   };
 };
