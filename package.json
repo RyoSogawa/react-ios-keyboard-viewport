@@ -4,7 +4,10 @@
   "description": "A React hook that dynamically adjusts element positioning during iOS keyboard display, utilizing the Visual Viewport API for precise calculations.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"(src|stories)/*.(js|ts|jsx|tsx)\"",
+    "lint": "eslint ./src ./stories",
+    "lint:fix": "yarn lint --fix",
+    "test": "tsc --noEmit && yarn lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
