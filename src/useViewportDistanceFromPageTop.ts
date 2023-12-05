@@ -42,7 +42,5 @@ export const useViewportDistanceFromPageTop = () => {
     };
   }, [isIOs]);
 
-  return {
-    distance,
-  };
+  return distance;
 };

@@ -11,7 +11,7 @@ export type FixedStyle = {
 };
 
 const useFixedStyleWithIosKeyboard = (): FixedStyle => {
-  const { distance } = useViewportDistanceFromPageTop();
+  const { toTop, toCenter, toBottom } = useViewportDistanceFromPageTop();
   const isIOs = useIsIOs();
   const keyboardHeight = useKeyboardHeight();
   const isKeyboardVisible = keyboardHeight > 0;
@@ -29,19 +29,19 @@ const useFixedStyleWithIosKeyboard = (): FixedStyle => {
     fixedTop: {
       position: 'absolute',
       top: 0,
-      transform: `translateY(${distance.toTop}px)`,
+      transform: `translateY(${toTop}px)`,
     },
     fixedCenter: {
       position: 'absolute',
       top: 0,
       bottom: 'auto',
-      transform: `translateY(calc(-50% + ${distance.toCenter}px))`,
+      transform: `translateY(calc(-50% + ${toCenter}px))`,
     },
     fixedBottom: {
       position: 'absolute',
       top: 0,
       bottom: 'auto',
-      transform: `translateY(calc(-100% + ${distance.toBottom}px))`,
+      transform: `translateY(calc(-100% + ${toBottom}px))`,
     },
   };
 };
