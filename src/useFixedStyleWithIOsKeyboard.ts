@@ -1,13 +1,7 @@
-import type React from 'react';
-
 import useIOsKeyboardHeight from './useIOsKeyboardHeight';
-import { useViewportDistanceFromPageTop } from './useViewportDistanceFromPageTop';
+import useViewportDistanceFromPageTop from './useViewportDistanceFromPageTop';
 
-export type FixedStyle = {
-  fixedTop: React.CSSProperties;
-  fixedCenter: React.CSSProperties;
-  fixedBottom: React.CSSProperties;
-};
+import type { FixedStyle } from './types';
 
 const useFixedStyleWithIOsKeyboard = (): FixedStyle => {
   const { toTop, toCenter, toBottom } = useViewportDistanceFromPageTop();
