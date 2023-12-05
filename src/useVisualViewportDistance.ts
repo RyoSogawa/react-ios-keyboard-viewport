@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { useIsIos } from './utils';
+import { useIsIOs } from './utils';
 
 export type Distance = {
   forTop: number;
@@ -12,7 +12,7 @@ export const useVisualViewportDistance = () => {
     forTop: 0,
     forBottom: 0,
   });
-  const isIOs = useIsIos();
+  const isIOs = useIsIOs();
 
   useEffect(() => {
     if (!isIOs) return;
