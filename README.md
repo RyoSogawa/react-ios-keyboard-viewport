@@ -6,7 +6,7 @@
 A React hook that dynamically adjusts element positioning during iOS keyboard display, utilizing the Visual Viewport API for precise calculations.
 
 ## Features
-- 📱 Overriding styles for iOS keyboard display only
+- 📱 Overriding styles specifically when the iOS keyboard is displayed
 - 🐥 Easy to use
 - 🫙 Zero Dependencies
 
