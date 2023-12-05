@@ -5,8 +5,8 @@ import { useViewportDistanceFromPageTop } from './useViewportDistanceFromPageTop
 import { useIsIOs } from './utils';
 
 export type FixedStyle = {
-  forTop: React.CSSProperties;
-  forBottom: React.CSSProperties;
+  fixedTop: React.CSSProperties;
+  fixedBottom: React.CSSProperties;
 };
 
 const useFixedStyleWithIosKeyboard = (): FixedStyle => {
@@ -18,18 +18,18 @@ const useFixedStyleWithIosKeyboard = (): FixedStyle => {
 
   if (!shouldApplyFixedStyle) {
     return {
-      forTop: {},
-      forBottom: {},
+      fixedTop: {},
+      fixedBottom: {},
     };
   }
 
   return {
-    forTop: {
+    fixedTop: {
       position: 'absolute',
       top: 0,
       transform: `translateY(${distance.toTop}px)`,
     },
-    forBottom: {
+    fixedBottom: {
       position: 'absolute',
       top: 0,
       bottom: 'auto',
