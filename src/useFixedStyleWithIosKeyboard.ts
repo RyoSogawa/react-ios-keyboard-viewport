@@ -26,7 +26,8 @@ const useFixedStyleWithIosKeyboard = (): FixedStyle => {
   return {
     forTop: {
       position: 'absolute',
-      top: distance.forTop,
+      top: 0,
+      transform: `translateY(${distance.forTop}px)`,
     },
     forBottom: {
       position: 'absolute',
