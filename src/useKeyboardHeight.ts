@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const useKeyboardVisible = () => {
+const useKeyboardHeight = () => {
   const [keyboardHeight, setKeyboardHeight] = useState(0);
 
   useEffect(() => {
@@ -25,4 +25,4 @@ const useKeyboardVisible = () => {
   return keyboardHeight;
 };
 
-export default useKeyboardVisible;
+export default useKeyboardHeight;
