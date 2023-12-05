@@ -9,7 +9,7 @@ export type FixedStyle = {
   fixedBottom: React.CSSProperties;
 };
 
-const useFixedStyleWithIosKeyboard = (): FixedStyle => {
+const useFixedStyleWithIOsKeyboard = (): FixedStyle => {
   const { toTop, toCenter, toBottom } = useViewportDistanceFromPageTop();
   const iOsKeyboardHeight = useIOsKeyboardHeight();
   const isIOsKeyboardVisible = iOsKeyboardHeight > 0;
@@ -43,4 +43,4 @@ const useFixedStyleWithIosKeyboard = (): FixedStyle => {
   };
 };
 
-export default useFixedStyleWithIosKeyboard;
+export default useFixedStyleWithIOsKeyboard;

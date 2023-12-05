@@ -1,9 +1,9 @@
 import React from 'react';
 
-import useFixedStyleWithIosKeyboard from '../src/useFixedStyleWithIosKeyboard';
+import useFixedStyleWithIOsKeyboard from '../src/useFixedStyleWithIOsKeyboard';
 
 const Demo: React.FC = () => {
-  const { fixedTop, fixedCenter, fixedBottom } = useFixedStyleWithIosKeyboard();
+  const { fixedTop, fixedCenter, fixedBottom } = useFixedStyleWithIOsKeyboard();
   return (
     <main className="wrapper">
       <header className="header" style={fixedTop}>
