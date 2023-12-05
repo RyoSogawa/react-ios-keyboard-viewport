@@ -6,6 +6,7 @@ import { useIsIOs } from './utils';
 
 export type FixedStyle = {
   fixedTop: React.CSSProperties;
+  fixedCenter: React.CSSProperties;
   fixedBottom: React.CSSProperties;
 };
 
@@ -19,6 +20,7 @@ const useFixedStyleWithIosKeyboard = (): FixedStyle => {
   if (!shouldApplyFixedStyle) {
     return {
       fixedTop: {},
+      fixedCenter: {},
       fixedBottom: {},
     };
   }
@@ -28,6 +30,12 @@ const useFixedStyleWithIosKeyboard = (): FixedStyle => {
       position: 'absolute',
       top: 0,
       transform: `translateY(${distance.toTop}px)`,
+    },
+    fixedCenter: {
+      position: 'absolute',
+      top: 0,
+      bottom: 'auto',
+      transform: `translateY(calc(-50% + ${distance.toCenter}px))`,
     },
     fixedBottom: {
       position: 'absolute',

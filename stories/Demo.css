@@ -21,6 +21,21 @@
   padding: 1em;
 }
 
+.center {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 60px;
+  padding: 8px;
+  background-color: green;
+  color: white;
+  text-align: center;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
