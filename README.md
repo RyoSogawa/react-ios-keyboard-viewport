@@ -1,36 +1,69 @@
 # react-ios-keyboard-viewport
 
+[![npm version](https://badge.fury.io/js/react-ios-keyboard-viewport.svg)](http://badge.fury.io/js/react-ios-keyboard-viewport)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+
 A React hook that dynamically adjusts element positioning during iOS keyboard display, utilizing the Visual Viewport API for precise calculations.
 
 ## Features
-
+- 📱 Overriding styles for iOS keyboard display only
+- 🐥 Easy to use
+- 🫙 Zero Dependencies
 
 ## Installation
-
 Install from npm:
 
 ```
-# Using npm
 npm install react-ios-keyboard-viewport
-
-# Using Yarn
-yarn add react-ios-keyboard-viewport
 ```
-  
 
 ## Usage
-  
+### useFixedStyleWithIOsKeyboard
+This hook generates a style object for elements that you want to fix to the Top/Center/Bottom of the screen.
+The style object is only generated when the keyboard is displayed on iOS, so please use this style object to override after styling for the normal display state.
 
-## Configuration
- 
+```tsx
+import { useFixedStyleWithIOsKeyboard } from 'react-ios-keyboard-viewport';
 
-## About mouse support
-Double-click on the separator to return it to its initial position.
-  
+const Component = () => {
+  const { fixedTop, fixedCenter, fixedBottom } = useFixedStyleWithIOsKeyboard();
+  return (
+    <div className="wrapper">
+      <header className="header" style={fixedTop}>
+        Fixed to Top
+      </header>
+      <div className="center" style={fixedCenter}>
+        Fixed to Center
+      </div>
+      <footer className="footer" style={fixedBottom}>
+        Fixed to Bottom
+      </footer>
+    </div>
+  );
+};
+```
+
+### useViewportDistanceFromPageTop 
+This hook calculates the distance from the top of the page to the Top/Center/Bottom of the visualViewport.
+The calculated values are used in the styles of useFixedStyleWithIosKeyboard, but they can also be used to freely customize styles in cases where that hook is not suitable.
+
+```tsx
+import { useViewportDistanceFromPageTop } from 'react-ios-keyboard-viewport';
+const { toTop, toCenter, toBottom } = useViewportDistanceFromPageTop();
+```
+
+### useKeyboardHeight
+This hook calculates the height of the virtual keyboard. 
+It is used inside useFixedStyleWithIosKeyboard to determine whether the keyboard is open.
+
+```tsx
+import { useKeyboardHeight } from 'react-ios-keyboard-viewport';
+const keyboardHeight = useKeyboardHeight();
+```
 
 ## Contribution
 Feel free to open an issue or make a pull request.
-  
+
 
 ## License
 Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
