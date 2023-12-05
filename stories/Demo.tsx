@@ -1,32 +1,18 @@
 import React from 'react';
 
-import { useVisualViewportDistance } from '../src/useVisualViewportDistance';
+import useFixedStyleWithIosKeyboard from '../src/useFixedStyleWithIosKeyboard';
 
 const Demo: React.FC = () => {
-  const { distance } = useVisualViewportDistance();
+  const { forTop, forBottom } = useFixedStyleWithIosKeyboard();
   return (
     <main className="wrapper">
-      <header
-        className="header"
-        style={{
-          position: 'absolute',
-          top: distance.forTop,
-        }}
-      >
+      <header className="header" style={forTop}>
         Header
       </header>
       <div>
         <textarea className="textarea" placeholder="focus here" />
       </div>
-      <footer
-        className="footer"
-        style={{
-          position: 'absolute',
-          top: 0,
-          bottom: 'auto',
-          transform: `translateY(calc(-100% + ${distance.forBottom}px))`,
-        }}
-      >
+      <footer className="footer" style={forBottom}>
         Footer
       </footer>
     </main>
