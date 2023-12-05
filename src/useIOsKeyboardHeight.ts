@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react';
 
-const useKeyboardHeight = () => {
+import { isIOs } from './utils';
+
+const useIOsKeyboardHeight = () => {
   const [keyboardHeight, setKeyboardHeight] = useState(0);
 
   useEffect(() => {
+    if (!isIOs()) return;
+
     const handleResize = () => {
       if (!visualViewport) return;
       const keyboardVisible = visualViewport.height < window.innerHeight;
@@ -25,4 +29,4 @@ const useKeyboardHeight = () => {
   return keyboardHeight;
 };
 
-export default useKeyboardHeight;
+export default useIOsKeyboardHeight;

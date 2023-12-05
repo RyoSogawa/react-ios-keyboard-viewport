@@ -1,8 +1,7 @@
 import type React from 'react';
 
-import useKeyboardHeight from './useKeyboardHeight';
+import useIOsKeyboardHeight from './useIOsKeyboardHeight';
 import { useViewportDistanceFromPageTop } from './useViewportDistanceFromPageTop';
-import { useIsIOs } from './utils';
 
 export type FixedStyle = {
   fixedTop: React.CSSProperties;
@@ -12,12 +11,10 @@ export type FixedStyle = {
 
 const useFixedStyleWithIosKeyboard = (): FixedStyle => {
   const { toTop, toCenter, toBottom } = useViewportDistanceFromPageTop();
-  const isIOs = useIsIOs();
-  const keyboardHeight = useKeyboardHeight();
-  const isKeyboardVisible = keyboardHeight > 0;
-  const shouldApplyFixedStyle = isIOs && isKeyboardVisible;
+  const iOsKeyboardHeight = useIOsKeyboardHeight();
+  const isIOsKeyboardVisible = iOsKeyboardHeight > 0;
 
-  if (!shouldApplyFixedStyle) {
+  if (!isIOsKeyboardVisible) {
     return {
       fixedTop: {},
       fixedCenter: {},

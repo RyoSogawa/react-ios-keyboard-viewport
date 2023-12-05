@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { useIsIOs } from './utils';
+import { isIOs } from './utils';
 
 export type Distance = {
   toTop: number;
@@ -14,10 +14,9 @@ export const useViewportDistanceFromPageTop = () => {
     toCenter: 0,
     toBottom: 0,
   });
-  const isIOs = useIsIOs();
 
   useEffect(() => {
-    if (!isIOs) return;
+    if (!isIOs()) return;
 
     const calcHeight: EventListener = () => {
       const top = window.scrollY;
@@ -40,7 +39,7 @@ export const useViewportDistanceFromPageTop = () => {
       }
       window.removeEventListener('scroll', calcHeight);
     };
-  }, [isIOs]);
+  }, []);
 
   return distance;
 };
