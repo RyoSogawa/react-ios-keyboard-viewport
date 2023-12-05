@@ -7,7 +7,7 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:storybook/recommended',
     'prettier',
-    'plugin:storybook/recommended'
+    'plugin:storybook/recommended',
   ],
   plugins: ['@typescript-eslint', 'jsx-a11y', 'react', 'react-hooks'],
   parser: '@typescript-eslint/parser',
@@ -29,6 +29,7 @@ module.exports = {
     },
   },
   rules: {
+    'arrow-body-style': 'off',
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-no-target-blank': 2,
