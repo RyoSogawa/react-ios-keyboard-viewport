@@ -12,7 +12,7 @@ export type FixedStyle = {
 /**
  * Distance from the top of the viewport to the top, center, and bottom of the page.
  */
-export type DistanceFromPageTop = {
+export type Distance = {
   toTop: number;
   toCenter: number;
   toBottom: number;

@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 
 import { isIOs } from './utils';
 
-import type { DistanceFromPageTop } from './types';
+import type { Distance } from './types';
 
 const useViewportDistanceFromPageTop = () => {
-  const [distance, setDistance] = useState<DistanceFromPageTop>({
+  const [distance, setDistance] = useState<Distance>({
     toTop: 0,
     toCenter: 0,
     toBottom: 0,
