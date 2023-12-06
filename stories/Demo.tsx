@@ -1,6 +1,6 @@
 import React from 'react';
 
-import useFixedStyleWithIOsKeyboard from '../src/useFixedStyleWithIOsKeyboard';
+import { useFixedStyleWithIOsKeyboard } from '../src';
 
 const Demo: React.FC = () => {
   const { fixedTop, fixedCenter, fixedBottom } = useFixedStyleWithIOsKeyboard();
