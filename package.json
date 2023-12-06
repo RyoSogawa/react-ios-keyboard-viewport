@@ -2,6 +2,24 @@
   "name": "react-ios-keyboard-viewport",
   "version": "0.0.1",
   "description": "A React hook that dynamically adjusts element positioning during iOS keyboard display, utilizing the Visual Viewport API for precise calculations.",
+  "author": "RyoSogawa",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "react-hook",
+    "ios",
+    "keyboard",
+    "visual-viewport",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyoSogawa/react-ios-keyboard-viewport.git"
+  },
+  "homepage": "https://github.com/RyoSogawa/react-ios-keyboard-viewport",
+  "bugs": {
+    "url": "https://github.com/RyoSogawa/react-ios-keyboard-viewport/issues"
+  },
   "files": [
     "lib"
   ],
@@ -22,24 +40,6 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RyoSogawa/react-ios-keyboard-viewport.git"
-  },
-  "keywords": [
-    "react",
-    "react-hook",
-    "ios",
-    "keyboard",
-    "visual-viewport",
-    "typescript"
-  ],
-  "author": "RyoSogawa",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/RyoSogawa/react-ios-keyboard-viewport/issues"
-  },
-  "homepage": "https://github.com/RyoSogawa/react-ios-keyboard-viewport#readme",
   "peerDependencies": {
     "react": ">=17.0.0",
     "react-dom": ">=17.0.0"
