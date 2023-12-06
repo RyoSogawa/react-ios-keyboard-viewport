@@ -21,7 +21,7 @@ npm install react-ios-keyboard-viewport
 
 ## Usage
 ### useFixedStyleWithIOsKeyboard
-This hook generates a style object for elements that you want to fix to the Top/Center/Bottom of the screen.
+This hook generates a style object for elements that you want to fix to the Top/Center/Bottom of the screen.  
 The style object is only generated when the keyboard is displayed on iOS, so please use this style object to override after styling for the normal display state.
 
 ```tsx
@@ -46,7 +46,7 @@ const Component = () => {
 ```
 
 ### useViewportDistanceFromPageTop 
-This hook calculates the distance from the top of the page to the Top/Center/Bottom of the visualViewport.
+This hook calculates the distance from the top of the page to the Top/Center/Bottom of the visualViewport.  
 The calculated values are used in the styles of useFixedStyleWithIosKeyboard, but they can also be used to freely customize styles in cases where that hook is not suitable.
 
 ```tsx
@@ -55,7 +55,7 @@ const { toTop, toCenter, toBottom } = useViewportDistanceFromPageTop();
 ```
 
 ### useIOsKeyboardHeight
-This hook calculates the height of the virtual keyboard of iOS. 
+This hook calculates the height of the virtual keyboard of iOS.   
 It is used inside useFixedStyleWithIosKeyboard to determine whether the iOS keyboard is open.
 
 ```tsx
