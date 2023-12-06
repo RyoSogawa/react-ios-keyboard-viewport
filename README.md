@@ -52,13 +52,13 @@ import { useViewportDistanceFromPageTop } from 'react-ios-keyboard-viewport';
 const { toTop, toCenter, toBottom } = useViewportDistanceFromPageTop();
 ```
 
-### useKeyboardHeight
-This hook calculates the height of the virtual keyboard. 
-It is used inside useFixedStyleWithIosKeyboard to determine whether the keyboard is open.
+### useIOsKeyboardHeight
+This hook calculates the height of the virtual keyboard of iOS. 
+It is used inside useFixedStyleWithIosKeyboard to determine whether the iOS keyboard is open.
 
 ```tsx
-import { useKeyboardHeight } from 'react-ios-keyboard-viewport';
-const keyboardHeight = useKeyboardHeight();
+import { useiOsKeyboardHeight } from 'react-ios-keyboard-viewport';
+const iOsKeyboardHeight = useiOsKeyboardHeight();
 ```
 
 ## Contribution
