@@ -5,7 +5,11 @@
 
 A React hook that dynamically adjusts element positioning during iOS keyboard display, utilizing the Visual Viewport API for precise calculations.
 
-[Storybook Demo](https://react-ios-keyboard-viewport.vercel.app/iframe.html?args=&id=demo--primary&viewMode=story)
+## Demo
+| Default                                                                                                       | Fixed                                                                                                       |
+|---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| ![default](./docs/default.MP4)                                                                                | ![fixed](./docs/fixed.MP4)                                                                                  |
+| [Storybook](https://react-ios-keyboard-viewport.vercel.app/iframe.html?args=&id=demo--default&viewMode=story) | [Storybook](https://react-ios-keyboard-viewport.vercel.app/iframe.html?args=&id=demo--fixed&viewMode=story) | 
 
 ## Features
 - 📱 Overriding styles specifically when the iOS keyboard is displayed
