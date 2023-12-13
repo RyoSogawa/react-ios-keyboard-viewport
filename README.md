@@ -11,7 +11,7 @@ A React hook that dynamically adjusts element positioning during iOS keyboard di
 ## Demo
 | Default                                                                                                       | Fixed                                                                                                       |
 |---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| ![default](./docs/default.gif)                                                                                | ![fixed](./docs/fixed.gif)                                                                                  |
+| <div style="max-width:200px">![default](./docs/default.gif)</div>                                             | <div style="max-width:200px">![fixed](./docs/fixed.gif)</div>                                               |
 | [Storybook](https://react-ios-keyboard-viewport.vercel.app/iframe.html?args=&id=demo--default&viewMode=story) | [Storybook](https://react-ios-keyboard-viewport.vercel.app/iframe.html?args=&id=demo--fixed&viewMode=story) | 
 
 ## Features
