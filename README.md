@@ -8,7 +8,7 @@ A React hook that dynamically adjusts element positioning during iOS keyboard di
 ## Demo
 | Default                                                                                                       | Fixed                                                                                                       |
 |---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| ![default](./docs/default.MP4)                                                                                | ![fixed](./docs/fixed.MP4)                                                                                  |
+| ![default](./docs/default.gif)                                                                                | ![fixed](./docs/fixed.gif)                                                                                  |
 | [Storybook](https://react-ios-keyboard-viewport.vercel.app/iframe.html?args=&id=demo--default&viewMode=story) | [Storybook](https://react-ios-keyboard-viewport.vercel.app/iframe.html?args=&id=demo--fixed&viewMode=story) | 
 
 ## Features
