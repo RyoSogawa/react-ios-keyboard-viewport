@@ -2,6 +2,9 @@
 
 [![npm version](https://badge.fury.io/js/react-ios-keyboard-viewport.svg)](http://badge.fury.io/js/react-ios-keyboard-viewport)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+[![minziggped size](https://badgen.net/bundlephobia/minzip/react-ios-keyboard-viewport)](https://bundlephobia.com/package/react-ios-keyboard-viewport)
+[![dependencies count](https://badgen.net/bundlephobia/dependency-count/react-ios-keyboard-viewport)](https://bundlephobia.com/package/react-ios-keyboard-viewport)
+[![tree shaking](https://badgen.net/bundlephobia/tree-shaking/react-ios-keyboard-viewport)](https://bundlephobia.com/package/react-ios-keyboard-viewport)
 
 A React hook that dynamically adjusts element positioning during iOS keyboard display, utilizing the Visual Viewport API for precise calculations.
 
