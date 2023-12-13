@@ -10,4 +10,14 @@ const meta: Meta<typeof Demo> = {
 export default meta;
 type Story = StoryObj<typeof Demo>;
 
-export const Primary: Story = {};
+export const Default: Story = {
+  args: {
+    fixed: false,
+  },
+};
+
+export const Fixed: Story = {
+  args: {
+    fixed: true,
+  },
+};
