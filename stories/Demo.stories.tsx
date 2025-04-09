@@ -1,5 +1,5 @@
 import Demo from './Demo';
-import './Demo.css';
+import './style.css';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
