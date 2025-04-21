@@ -10,7 +10,6 @@ export const useWindowHeight = () => {
   const [windowHeight, setWindowHeight] = useState<number>(0);
 
   useEffect(() => {
-    console.log(window.innerHeight, keyboardHeight);
     setWindowHeight(window.innerHeight - keyboardHeight);
   }, [keyboardHeight]);
 
