@@ -1,5 +1,18 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100svh;
+  overflow-y: scroll;
+}
+
 .wrapper {
   padding: 48px 12px;
+
+  &.wrapper--relative {
+    position: relative;
+  }
 }
 
 .header {
@@ -19,6 +32,18 @@
   font-size: 16px;
   border: 1px solid #ccc;
   padding: 1em;
+}
+
+.textbox {
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 1em;
+}
+
+.gradient {
+  background: linear-gradient(to bottom, #000, #fff);
+  height: 100vh;
 }
 
 .center {
