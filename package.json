@@ -1,6 +1,6 @@
 {
   "name": "react-ios-keyboard-viewport",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A React hook that dynamically adjusts element positioning during iOS keyboard display, utilizing the Visual Viewport API for precise calculations.",
   "author": "RyoSogawa",
   "license": "MIT",
