@@ -17,3 +17,5 @@ export type Distance = {
   toCenter: number;
   toBottom: number;
 };
+
+export type Target = HTMLElement | Element | Window | Document | null | undefined;

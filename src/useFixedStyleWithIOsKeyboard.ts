@@ -1,10 +1,18 @@
 import useIOsKeyboardHeight from './useIOsKeyboardHeight';
 import useViewportDistanceFromPageTop from './useViewportDistanceFromPageTop';
 
-import type { FixedStyle } from './types';
+import type { FixedStyle, Target } from './types';
 
-const useFixedStyleWithIOsKeyboard = (): FixedStyle => {
-  const { toTop, toCenter, toBottom } = useViewportDistanceFromPageTop();
+export type UseFixedStyleWithIOsKeyboardProps = {
+  target?: Target;
+};
+
+const useFixedStyleWithIOsKeyboard = (
+  { target }: UseFixedStyleWithIOsKeyboardProps = {
+    target: undefined,
+  },
+): FixedStyle => {
+  const { toTop, toCenter, toBottom } = useViewportDistanceFromPageTop({ target });
   const iOsKeyboardHeight = useIOsKeyboardHeight();
   const isIOsKeyboardVisible = iOsKeyboardHeight > 0;
 

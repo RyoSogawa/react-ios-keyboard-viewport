@@ -1,14 +1,14 @@
-import Demo from './Demo';
+import WithModal from './WithModal';
 import './style.css';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-const meta: Meta<typeof Demo> = {
-  component: Demo,
+const meta: Meta<typeof WithModal> = {
+  component: WithModal,
 };
 
 export default meta;
-type Story = StoryObj<typeof Demo>;
+type Story = StoryObj<typeof WithModal>;
 
 export const Default: Story = {
   args: {
