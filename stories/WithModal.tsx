@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 
+import { useWindowHeight } from './WithModal.hooks';
 import { useFixedStyleWithIOsKeyboard } from '../src';
 
 export type WithTargetProps = {
@@ -11,9 +12,10 @@ const WithModal: React.FC<WithTargetProps> = ({ fixed }) => {
   const { fixedTop, fixedCenter, fixedBottom } = useFixedStyleWithIOsKeyboard({
     target: ref.current,
   });
+  const windowHeight = useWindowHeight();
 
   return (
-    <main ref={ref} className="modal">
+    <main ref={ref} className="modal" style={{ height: windowHeight }}>
       <div className="wrapper wrapper--relative">
         <input className="textbox" placeholder="focus here and scroll down..." />
         <div className="gradient" />
